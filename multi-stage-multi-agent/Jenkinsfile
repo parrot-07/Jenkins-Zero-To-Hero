@@ -15,10 +15,7 @@ pipeline {
       }
       steps {
         sh 'node --version'
-        sh mkdir docker-hello
-        sh cd docker-hello
-        nano Dockerfile
-      }
+        sh 'docker run hello-world'
     }
   }
 }
