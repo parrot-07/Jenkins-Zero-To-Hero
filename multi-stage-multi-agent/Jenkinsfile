@@ -4,10 +4,10 @@ agent {
      }
 
 stages{
-  stage('pull docker image'){   
+  stage('test version'){   
       steps{
-        echo 'Pulling hello world docker image..'
-        sh 'docker pull hello-world'
+        echo 'version test..'
+        sh 'node -version'
       }
     }
   stage('run docker container'){    
