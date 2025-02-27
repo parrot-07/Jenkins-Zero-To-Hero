@@ -1,0 +1,18 @@
+pipeline {
+agent none
+
+stages{
+    stage('pull docker image'){
+      steps{
+        echo 'Pulling hello world docker image..'
+        sh 'docker pull hello-world'
+      }
+    }
+  stage('run docker container'){
+    steps{
+      echo 'executing docker container..'
+      sh 'docker run hello-world'
+    }
+  }
+}
+}
