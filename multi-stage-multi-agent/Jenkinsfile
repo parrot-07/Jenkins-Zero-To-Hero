@@ -7,7 +7,7 @@ stages{
   stage('test version'){   
       steps{
         echo 'version test..'
-        sh 'node -version'
+        sh 'node --version'
       }
     }
   stage('run docker container'){    
