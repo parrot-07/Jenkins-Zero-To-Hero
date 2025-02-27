@@ -2,6 +2,8 @@ pipeline {
 agent none
 
 stages{
+  agent {
+        docker { image 'node:16-alpine' }
     stage('pull docker image'){
       steps{
         echo 'Pulling hello world docker image..'
@@ -14,5 +16,6 @@ stages{
       sh 'docker run hello-world'
     }
   }
+}
 }
 }
